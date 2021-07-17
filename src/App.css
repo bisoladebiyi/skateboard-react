@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  font-family: Poppins;
+  background: #1e2127;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* navbar */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+.logo {
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  width: 148px;
+}
+.navbar form {
+  position: relative;
+}
+.searchbar {
+  color: #808191;
+  padding: 0 40px 0 15px;
+  width: 600px;
+  height: 32px;
+  border-radius: 10px;
+  background: #2c2e43;
+  border: none;
+  outline: none;
+}
+.searchicon {
+  position: absolute;
+  right: 20px;
+  top: 9px;
+}
+.person-icon {
+  display: flex;
+}
+.person-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30px;
+}
+.person-img p {
+  font-size: 13px;
+  margin: 0 10px;
+}
+
+/* body */
+.main-body {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+/* side-nav */
+.menu-heading {
+  color: #808191;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.sidenav-items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.icons {
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  background: #2c2e43;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-right: 20px;
+}
+.sidenav-items p {
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  color: #808191;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.active .icons {
+  background: #ff7551;
+}
+.active .icons path {
+  fill: #fff;
+}
+.active p {
+  font-weight: 600;
+  color: #fff;
+}
+.first-section {
+  width: 148px;
+  border-bottom: 1px solid #34373c;
+  margin-bottom: 40px;
+}
+.night-day-mode {
+  display: flex;
+  align-items: center;
+}
+.night-day-mode p {
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  color: #808191;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.toggle-icon {
+  width: 47px;
+  height: 27px;
+  background: #6c5ecf;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 15px;
+}
+.toggle-icon .knob {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  right: 2px;
 }
