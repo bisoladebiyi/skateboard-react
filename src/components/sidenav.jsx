@@ -4,7 +4,7 @@ const Sidenav = () => {
   return (
     <div className="side-nav">
       <h5 className="menu-heading">MENU</h5>
-      <div className="first-section">
+      <div className="section">
         <div className="sidenav-items active">
           <div className="icons">
             <svg
@@ -98,7 +98,7 @@ const Sidenav = () => {
         </div>
       </div>
       <h5 className="menu-heading">CATEGORIES</h5>
-      <div className="first-section">
+      <div className="section">
         <div className="sidenav-items">
           <div className="icons">
             <svg

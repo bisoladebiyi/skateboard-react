@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 body {
   font-family: Poppins;
   background: #1e2127;
   color: #fff;
   margin: 0;
   padding: 0;
+}
+
+p {
+  margin: 0;
 }
 
 /* navbar */
@@ -14,15 +19,19 @@ body {
   align-items: center;
   padding: 0 30px;
 }
+
+
 .logo {
   color: #fff;
   font-weight: 600;
   font-size: 20px;
   width: 148px;
 }
+
 .navbar form {
   position: relative;
 }
+
 .searchbar {
   color: #808191;
   padding: 0 40px 0 15px;
@@ -32,21 +41,26 @@ body {
   background: #2c2e43;
   border: none;
   outline: none;
+  margin-left: -140px;
 }
+
 .searchicon {
   position: absolute;
   right: 20px;
   top: 9px;
 }
+
 .person-icon {
   display: flex;
 }
+
 .person-img {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-right: 30px;
 }
+
 .person-img p {
   font-size: 13px;
   margin: 0 10px;
@@ -54,8 +68,9 @@ body {
 
 /* body */
 .main-body {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 148px 1fr;
+  grid-column-gap: 60px;
   padding: 0 30px;
 }
 
@@ -66,11 +81,13 @@ body {
   font-weight: 500;
   letter-spacing: 1px;
 }
+
 .sidenav-items {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
 }
+
 .icons {
   width: 30px;
   height: 30px;
@@ -81,6 +98,7 @@ body {
   justify-content: center;
   margin-right: 20px;
 }
+
 .sidenav-items p {
   letter-spacing: 0.5px;
   font-size: 12px;
@@ -91,22 +109,27 @@ body {
 .active .icons {
   background: #ff7551;
 }
+
 .active .icons path {
   fill: #fff;
 }
+
 .active p {
   font-weight: 600;
   color: #fff;
 }
-.first-section {
+
+.section {
   width: 148px;
   border-bottom: 1px solid #34373c;
   margin-bottom: 40px;
 }
+
 .night-day-mode {
   display: flex;
   align-items: center;
 }
+
 .night-day-mode p {
   letter-spacing: 0.5px;
   font-size: 12px;
@@ -123,6 +146,7 @@ body {
   position: relative;
   margin-right: 15px;
 }
+
 .toggle-icon .knob {
   width: 22px;
   height: 22px;
@@ -130,4 +154,140 @@ body {
   background: #fff;
   position: absolute;
   right: 2px;
+}
+
+
+/* body  */
+.discover-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+
+}
+
+.discover-card1 {
+  grid-column: 1/3;
+  background: url('images/basic\ jumping.png') no-repeat;
+  background-size: cover;
+
+  height: 340px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.discover-card2 {
+  background: url('images/skateboard-tips.png') no-repeat;
+  background-size: cover;
+  height: 340px;
+  border-radius: 20px;
+  position: relative;
+
+}
+.discover-card1-info{
+  width: 32%;
+  height: auto;
+  padding:30px 30px 0;
+}
+.discover-card1-info h2 {
+  font-weight: 600;
+}
+.discover-card2-info{
+  width: 70%;
+  padding: 30px 30px 0;
+}
+.tony-info p:first-child{
+  font-weight: 500;
+}
+.tony-info p:last-child{
+ font-size: 12px;
+ margin-bottom: 30px;
+}
+.time-badge{
+  width: 44px;
+height: 15px;
+bottom: 30px;
+right: 20px;
+font-size: 10px;
+color: #fff;
+text-align: center;
+background: #2c2e43;
+opacity: .6;
+border-radius: 7px;
+position: absolute;
+
+
+}
+.thomas-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.thomas-info div p:first-child{
+  font-weight: 500;
+}
+.thomas-info div p:last-child{
+ font-size: 12px;
+}
+
+.most-watched {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.most-watched .most-watched-cards {
+  height: auto;
+  background: #242730;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.most-watched-image {
+  width: 100%;
+  height: 150px;
+}
+
+/* .most-watched-name {
+  display: flex;
+} */
+
+.most-watched-info {
+  padding: 0 20px;
+}
+
+.name {
+  font-size: 12px;
+  line-height: 13px;
+  letter-spacing: 0.5px;
+  margin-top: 17px;
+  color: #B7B9D2;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 0.3px;
+  color: #FFFFFF;
+  margin-top: 12px;
+}
+
+.views {
+  font-size: 11px;
+  line-height: 12px;
+  letter-spacing: 0.5px;
+  color: #808191;
+  margin-top: 15px;
+}
+.avatar {
+  position: absolute;
+  right: 20px;
+  top: 120px;
+}
+.most-watched-time{
+top: 20px;
+right: 10px;
 }
