@@ -6,6 +6,8 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
+  position: relative;
+  overflow-x: hidden;
 }
 
 p {
@@ -18,6 +20,20 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
+
+}
+
+.logo-menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  display: none;
+  outline: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 
@@ -25,7 +41,6 @@ p {
   color: #fff;
   font-weight: 600;
   font-size: 20px;
-  width: 148px;
 }
 
 .navbar form {
@@ -41,7 +56,6 @@ p {
   background: #2c2e43;
   border: none;
   outline: none;
-  margin-left: -140px;
 }
 
 .searchicon {
@@ -66,15 +80,42 @@ p {
   margin: 0 10px;
 }
 
+/* dropdown menu  */
+.menu{
+  z-index: 100000;
+  padding: 40px 0;
+  width: 200px;
+  height: 100%;
+  padding-left: 20px;
+  background:  #272b31;
+  position: absolute;
+  left: -300px;
+  transition: left ease .3s;
+}
+.close-icon {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  outline: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.search-menu{
+  width: 150px;
+  height: 25px;
+  font-size: 10px;
+}
+
+
 /* body */
 .main-body {
   display: grid;
-  grid-template-columns: 148px 1fr;
-  grid-column-gap: 60px;
+  grid-template-columns: 1fr 4fr;
   padding: 0 30px;
 }
 
-/* side-nav */
+/* side-nav  */
 .menu-heading {
   color: #808191;
   font-size: 10px;
@@ -156,78 +197,84 @@ p {
   right: 2px;
 }
 
-
-/* body  */
+/* discover */
 .discover-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-gap: 20px;
-
 }
 
 .discover-card1 {
-  grid-column: 1/3;
-  background: url('images/basic\ jumping.png') no-repeat;
+  background: url("images/basic\ jumping.png") no-repeat;
   background-size: cover;
-
-  height: 340px;
-  border-radius: 20px;
-  position: relative;
-}
-
-.discover-card2 {
-  background: url('images/skateboard-tips.png') no-repeat;
-  background-size: cover;
-  height: 340px;
-  border-radius: 20px;
-  position: relative;
-
-}
-.discover-card1-info{
-  width: 32%;
+  padding-bottom: 40px;
   height: auto;
-  padding:30px 30px 0;
+  border-radius: 20px;
+  position: relative;
 }
-.discover-card1-info h2 {
-  font-weight: 600;
-}
-.discover-card2-info{
-  width: 70%;
+.discover-card1-info {
+  width: 34%;
+  height: auto;
   padding: 30px 30px 0;
 }
-.tony-info p:first-child{
-  font-weight: 500;
-}
-.tony-info p:last-child{
- font-size: 12px;
- margin-bottom: 30px;
-}
-.time-badge{
-  width: 44px;
-height: 15px;
-bottom: 30px;
-right: 20px;
-font-size: 10px;
-color: #fff;
-text-align: center;
-background: #2c2e43;
-opacity: .6;
-border-radius: 7px;
-position: absolute;
 
-
+.discover-card1-info h2 {
+  font-weight: 600;
 }
 .thomas-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
-.thomas-info div p:first-child{
+
+.thomas-info div p:first-child {
   font-weight: 500;
 }
-.thomas-info div p:last-child{
- font-size: 12px;
+
+.thomas-info div p:last-child {
+  font-size: 12px;
+}
+.discover-card2 {
+  background: url("images/skateboard-tips.png") no-repeat;
+  background-size: cover;
+  height: auto;
+  border-radius: 20px;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.discover-card2-info {
+  width: 70%;
+  padding: 30px 30px 0;
+}
+
+.tony-info p:first-child {
+  font-weight: 500;
+}
+
+.tony-info p:last-child {
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.time-badge {
+  width: 44px;
+  height: 15px;
+  bottom: 30px;
+  right: 20px;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  background: #2c2e43;
+  opacity: 0.6;
+  border-radius: 7px;
+  position: absolute;
+}
+
+
+/* most-watched  */
+.most-watched-heading {
+  margin-top: 90px;
 }
 
 .most-watched {
@@ -242,17 +289,13 @@ position: absolute;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .most-watched-image {
   width: 100%;
   height: 150px;
 }
-
-/* .most-watched-name {
-  display: flex;
-} */
 
 .most-watched-info {
   padding: 0 20px;
@@ -263,7 +306,7 @@ position: absolute;
   line-height: 13px;
   letter-spacing: 0.5px;
   margin-top: 17px;
-  color: #B7B9D2;
+  color: #b7b9d2;
 }
 
 .description {
@@ -271,7 +314,7 @@ position: absolute;
   font-size: 15px;
   line-height: 26px;
   letter-spacing: 0.3px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 12px;
 }
 
@@ -282,12 +325,697 @@ position: absolute;
   color: #808191;
   margin-top: 15px;
 }
+
 .avatar {
   position: absolute;
   right: 20px;
   top: 120px;
 }
-.most-watched-time{
-top: 20px;
-right: 10px;
+
+.most-watched-time {
+  top: 20px;
+  right: 10px;
+}
+
+/* media-queries */
+
+@media (max-width: 1050px) and (min-width: 1000px) {
+  .searchbar {
+    width: 400px;
+  }
+
+  .discover-card1-info {
+    width: 43%;
+  }
+
+  .discover-card2-info {
+    width: 90%;
+    padding: 30px 15px 0;
+  }
+
+  .discover-card2-info h2 {
+    font-size: 18px;
+  }
+
+  .tony-info p:first-child {
+    margin-top: 35px;
+  }
+
+  .most-watched-image {
+    height: 130px;
+  }
+
+  .most-watched-info {
+    padding: 0 18px;
+  }
+
+  .description {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .views {
+    font-size: 10px;
+  }
+
+  .avatar {
+    width: 50px;
+    right: 15px;
+    top: 100px;
+  }
+}
+
+@media (max-width: 999px) and (min-width: 0px) {
+  .discover-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .thomas-info {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 999px) and (min-width: 900px) {
+  .searchbar {
+    width: 300px;
+    height: 30px;
+  }
+
+  .person-img img:first-child {
+    width: 30px;
+  }
+
+  .person-img p {
+    font-size: 12px;
+  }
+
+  .section {
+    width: 130px;
+  }
+
+  .sidenav-items p {
+    font-size: 11px;
+  }
+
+  .discover-card1-info {
+    width: 90%;
+  }
+
+  .thomas-info div p:last-child {
+    margin-bottom: 15px;
+  }
+
+  .time-badge {
+    font-size: 9px;
+    height: 13px;
+    width: 40px;
+  }
+
+  .most-watched-image {
+    height: 130px;
+  }
+
+  .most-watched-info {
+    padding: 0 10px;
+  }
+
+  .name {
+    font-size: 10px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .views {
+    font-size: 9px;
+  }
+
+  .avatar {
+    width: 45px;
+    right: 20px;
+    top: 110px;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 319px) {
+  .most-watched {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 750px) {
+  .searchbar {
+    width: 220px;
+    height: 30px;
+  }
+
+  .person-img img:first-child {
+    width: 30px;
+  }
+
+  .person-img p {
+    font-size: 12px;
+  }
+
+  .main-body {
+    grid-column-gap: 50px;
+  }
+
+  .menu-heading {
+    font-size: 9px;
+  }
+
+  .icons {
+    width: 27px;
+    height: 27px;
+  }
+
+  .discover-card1 {
+    background-size: 150% 100%;
+  }
+
+  .discover-card2 {
+    background-size: 100% 100%;
+  }
+
+  .discover-card1-info {
+    width: 90%;
+    padding: 20px 20px 0;
+  }
+
+  .discover-card2-info {
+    padding: 20px 20px 0;
+  }
+
+  .discover-card1-info h2 {
+    font-size: 20px;
+  }
+
+  .discover-card2-info h2 {
+    font-size: 20px;
+  }
+
+  .thomas-info div p:first-child {
+    font-size: 13px;
+  }
+
+  .thomas-info div p:last-child {
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+
+  .tony-info p:first-child {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+
+  .tony-info p:last-child {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .time-badge {
+    font-size: 8px;
+    height: 11px;
+    width: 36px;
+  }
+
+  .most-watched-image {
+    height: 130px;
+  }
+
+  .most-watched-info {
+    padding: 0 20px;
+  }
+
+  .name {
+    font-size: 10px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .views {
+    font-size: 9px;
+  }
+
+  .avatar {
+    width: 50px;
+    right: 20px;
+    top: 110px;
+  }
+}
+
+@media (max-width: 749px) and (min-width: 0px) {
+  .searchbar,
+  .searchicon,
+  .hide {
+    display: none;
+  }
+
+
+  .main-body {
+    display: block;
+  }
+
+  .menu-icon {
+    margin-right: 20px;
+    display: block;
+  }
+}
+
+@media (max-width: 749px) and (min-width: 530px) {
+  .person-img p {
+    font-size: 11px;
+  }
+
+  .person-img img:first-child {
+    width: 30px;
+  }
+
+  .discover-card1 {
+    background-size: 150% 100%;
+  }
+
+  .discover-card2 {
+    background-size: 100% 100%;
+  }
+
+  .discover-card1-info {
+    width: 90%;
+    padding: 20px 20px 0;
+  }
+
+  .discover-card2-info {
+    padding: 20px 20px 0;
+  }
+
+  .discover-card1-info h2 {
+    font-size: 20px;
+  }
+
+  .discover-card2-info h2 {
+    font-size: 20px;
+  }
+
+  .thomas-info div p:first-child {
+    font-size: 13px;
+  }
+
+  .thomas-info div p:last-child {
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+
+  .tony-info p:first-child {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+
+  .tony-info p:last-child {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .time-badge {
+    font-size: 8px;
+    height: 11px;
+    width: 36px;
+  }
+}
+@media (max-width: 529px) and (min-width: 0px){
+  .discover-heading{
+    font-size: 25px;
+  }
+  .most-watched-heading{
+    font-size: 18px;
+  }
+}
+@media (max-width: 529px) and (min-width: 410px) {
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .menu-icon {
+    width: 20px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .person-img {
+    margin-right: 10px;
+  }
+
+  .person-img p {
+    font-size: 9px;
+    margin: 0 7px;
+  }
+
+  .person-img img:first-child {
+    width: 20px;
+  }
+
+  .notification {
+    width: 15px;
+  }
+  .main-body {
+    padding: 0 20px;
+  }
+
+  .discover-card1 {
+    background-size: 150% 100%;
+    padding-bottom: 20px;
+  }
+
+  .discover-card2 {
+    background-size: 100% 100%;
+    padding-bottom: 20px;
+  }
+
+  .discover-card1-info {
+    width: 90%;
+    padding: 20px 15px 0;
+  }
+
+  .discover-card2-info {
+    padding: 20px 15px 0;
+  }
+
+  .discover-card1-info h2 {
+    font-size: 16px;
+  }
+
+  .discover-card2-info h2 {
+    font-size: 16px;
+  }
+
+  .thomas-info div p:first-child {
+    font-size: 11px;
+  }
+
+  .thomas-info div p:last-child {
+    font-size: 9px;
+    margin-bottom: 15px;
+  }
+
+  .tony-info p:first-child {
+    font-size: 11px;
+    margin-top: 20px;
+  }
+
+  .tony-info p:last-child {
+    font-size: 9px;
+    margin-bottom: 10px;
+  }
+
+  .discover-img {
+    width: 55px;
+  }
+
+  .time-badge {
+    font-size: 8px;
+    height: 11px;
+    width: 36px;
+  }
+
+  .most-watched-image {
+    height: 120px;
+  }
+
+  .most-watched-info {
+    padding: 0 15px;
+  }
+
+  .name {
+    font-size: 10px;
+  }
+
+  .description {
+    font-size: 10px;
+    line-height: 17px;
+  }
+
+  .views {
+    font-size: 9px;
+  }
+
+  .avatar {
+    width: 50px;
+    right: 20px;
+    top: 95px;
+  }
+}
+
+@media (max-width: 409px) and (min-width: 319px) {
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .menu-icon {
+    width: 15px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .person-img {
+    margin-right: 5px;
+  }
+
+  .person-img p {
+    font-size: 9px;
+    margin: 0 7px;
+  }
+
+  .person-img img:first-child {
+    width: 20px;
+  }
+
+  .notification {
+    width: 15px;
+  }
+  .main-body {
+    padding: 0 20px;
+  }
+
+  .discover-card1 {
+    background-size: 170% 100%;
+    padding-bottom: 20px;
+  }
+
+  .discover-card2 {
+    background-size: 100% 100%;
+    padding-bottom: 20px;
+  }
+
+  .discover-card1-info {
+    width: 90%;
+    padding: 20px 10px 0;
+  }
+
+  .discover-card2-info {
+    padding: 20px 10px 0;
+  }
+
+  .discover-card1-info h2 {
+    font-size: 14px;
+  }
+
+  .discover-card2-info h2 {
+    font-size: 14px;
+  }
+
+  .thomas-info div p:first-child {
+    font-size: 10px;
+  }
+
+  .thomas-info div p:last-child {
+    font-size: 8px;
+    margin-bottom: 15px;
+  }
+
+  .tony-info p:first-child {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+
+  .tony-info p:last-child {
+    font-size: 8px;
+    margin-bottom: 10px;
+  }
+
+  .discover-img {
+    width: 40px;
+  }
+
+  .time-badge {
+    font-size: 8px;
+    height: 11px;
+    width: 34px;
+  }
+
+  .most-watched-image {
+    height: 110px;
+  }
+
+  .most-watched-info {
+    padding: 0 10px;
+  }
+
+  .name {
+    font-size: 9px;
+  }
+
+  .description {
+    font-size: 10px;
+    line-height: 17px;
+  }
+
+  .views {
+    font-size: 8px;
+  }
+
+  .avatar {
+    width: 43px;
+    right: 20px;
+    top: 87px;
+  }
+}
+@media (max-width: 318px){
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .menu-icon {
+    width: 15px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .person-img {
+    margin-right: 5px;
+  }
+
+  .person-img p {
+    font-size: 9px;
+    margin: 0 7px;
+  }
+
+  .person-img img:first-child {
+    width: 20px;
+  }
+
+  .notification {
+    width: 15px;
+  }
+  .main-body {
+    padding: 0 20px;
+  }
+
+  .discover-card1 {
+    background-size: 170% 100%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .discover-card2 {
+    background-size: 100% 100%;
+    padding-bottom: 20px;
+  }
+
+  .discover-card1-info {
+    width: 90%;
+    padding: 20px 10px 0;
+  }
+
+  .discover-card2-info {
+    padding: 20px 10px 0;
+  }
+
+  .discover-card1-info h2 {
+    font-size: 14px;
+  }
+
+  .discover-card2-info h2 {
+    font-size: 14px;
+  }
+
+  .thomas-info div p:first-child {
+    font-size: 10px;
+  }
+
+  .thomas-info div p:last-child {
+    font-size: 8px;
+    margin-bottom: 15px;
+  }
+
+  .tony-info p:first-child {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+
+  .tony-info p:last-child {
+    font-size: 8px;
+    margin-bottom: 10px;
+  }
+
+  .discover-img {
+    width: 40px;
+  }
+
+  .time-badge {
+    font-size: 8px;
+    height: 11px;
+    width: 34px;
+  }
+
+  .most-watched-image {
+    height: 110px;
+  }
+
+  .most-watched-info {
+    padding: 0 10px;
+  }
+
+  .name {
+    font-size: 9px;
+  }
+
+  .description {
+    font-size: 10px;
+    line-height: 17px;
+  }
+
+  .views {
+    font-size: 8px;
+  }
+
+  .avatar {
+    width: 43px;
+    right: 20px;
+    top: 87px;
+  }
+  .discover-cards {
+    display: block;
+  }
+  
+  .most-watched {
+    display: block;
+  }
+  .most-watched .most-watched-cards {
+  margin-bottom: 20px;
+  }
+
 }

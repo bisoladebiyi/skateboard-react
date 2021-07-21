@@ -15,13 +15,14 @@ import offline from "../icons/offline.svg";
 const Body = () => {
   return (
     <div>
-      <h1>Discover</h1>
+      
+      <h1 className="discover-heading">Discover</h1>
       <div className="discover-cards">
         <div className="discover-card1">
           <div className="discover-card1-info">
             <h2>How to do Basic Jumping and how to landing safely</h2>
             <div className="thomas-info">
-              <img src={thomas} alt="" />
+              <img src={thomas} alt="" className="discover-img" />
               <div>
                 <p>Thomas Hope</p>
                 <p>53K views • 2 weeks ago</p>
@@ -39,13 +40,13 @@ const Body = () => {
               <p>53K views • 2 weeks ago</p>
             </div>
 
-            <img src={tony} alt="" />
+            <img src={tony} alt="" className="discover-img" />
 
             <div className="time-badge">10 min</div>
           </div>
         </div>
       </div>
-      <h2>Most Watched</h2>
+      <h2 className="most-watched-heading">Most Watched</h2>
       <div className="most-watched">
         {data.map(({ name, views, text, image, image2, status }, index) => (
           <div className="most-watched-cards">

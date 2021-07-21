@@ -1,8 +1,8 @@
 import React from "react";
 
-const Sidenav = () => {
+const Sidenav = (props) => {
   return (
-    <div className="side-nav">
+    <div className={`side-nav ${props.hide}`}>
       <h5 className="menu-heading">MENU</h5>
       <div className="section">
         <div className="sidenav-items active">
