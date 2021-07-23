@@ -589,6 +589,25 @@ p {
     margin-right: 20px;
     display: block;
   }
+  .menu-heading {
+    font-size: 9px;
+  }
+  .icons {
+    width: 25px;
+    height: 25px;
+    border-radius: 8px;
+  }
+  .sidenav-items p {
+    font-size: 10px;
+  }
+  .toggle-icon {
+    width: 37px;
+  height: 20px;
+  }
+  .toggle-icon .knob {
+    width: 16px;
+  height: 16px;
+  }
 }
 
 @media (max-width: 749px) and (min-width: 530px) {
