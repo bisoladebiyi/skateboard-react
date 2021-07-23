@@ -40,14 +40,4 @@ const Navbar = () => {
   );
 };
 
-// const showMenu = () => {
-//     let menu = document.getElementById("menu");
-  
-//     if (menu.style.left !== "0px") {
-//       menu.setAttribute("style", "left: 0;");
-//     }
-//      else {
-//       menu.setAttribute("style", "leftt: -300px;");
-//     }
-//   };
 export default Navbar;
